@@ -1,0 +1,8 @@
+Basic Apache Config:
+
+<LocationMatch "/thumbnail/([0-9]*)/">
+  SetHandler modperl
+  PerlOptions +GlobalRequest
+  PerlResponseHandler Image::Thumbnail
+  PerlSetVar CacheTime 1209600
+</LocationMatch>
